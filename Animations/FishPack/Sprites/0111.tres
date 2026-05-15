@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://c3cnv1bhhquv6"]
+
+[ext_resource type="Texture2D" uid="uid://r05sekkqb81t" path="res://Animations/FishPack/texture-1.png" id="1_iq40r"]
+
+[resource]
+atlas = ExtResource("1_iq40r")
+region = Rect2(2508, 419.5, 418, 419.5)

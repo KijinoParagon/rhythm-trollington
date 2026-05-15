@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://d2qf8e50mrag8"]
+
+[ext_resource type="Script" uid="uid://dihrpxdevcctr" path="res://RhythmGame.cs" id="1_epypp"]
+[ext_resource type="AudioStream" uid="uid://b3cr3x7xkmntg" path="res://Audio/tinktinkabeat.ogg" id="2_epypp"]
+[ext_resource type="Script" uid="uid://dq3ex4bkm1dl5" path="res://Pulse.cs" id="3_epypp"]
+[ext_resource type="Script" uid="uid://b2nvf2i8s4js8" path="res://Camera3d.cs" id="4_0hol4"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_epypp"]
+top_radius = 0.05
+bottom_radius = 0.05
+height = 100.0
+radial_segments = 16
+
+[node name="RhythmGame" type="Node3D"]
+script = ExtResource("1_epypp")
+
+[node name="Tinktink" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_epypp")
+parameters/looping = false
+
+[node name="Pulse" type="Node2D" parent="."]
+position = Vector2(587, 334)
+script = ExtResource("3_epypp")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.8433914, -0.11629293, 0.5245635, 0, 0.976296, 0.21643962, -0.53729963, -0.18254332, 0.82339966, 1.318, 1.26, 2.12)
+current = true
+script = ExtResource("4_0hol4")
+
+[node name="XTrack" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("CylinderMesh_epypp")
+
+[node name="YTrack" type="MeshInstance3D" parent="."]
+mesh = SubResource("CylinderMesh_epypp")
+
+[node name="ZTrack" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_epypp")
+skeleton = NodePath("../XTrack")

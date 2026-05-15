@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://ke81dnt71hls"]
+
+[ext_resource type="Texture2D" uid="uid://duw1lnia5skxi" path="res://Animations/RingPack/texture-7.png" id="1_7cmm0"]
+
+[resource]
+atlas = ExtResource("1_7cmm0")
+region = Rect2(846, 854, 834, 834)
