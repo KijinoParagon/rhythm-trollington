@@ -1,6 +1,6 @@
 [gd_scene load_steps=214 format=3 uid="uid://cepsom16bo4iy"]
 
-[ext_resource type="Script" uid="uid://cn5ms42kcvbs2" path="res://Beat.cs" id="1_ab1vn"]
+[ext_resource type="Script" uid="uid://4majmt6jau5k" path="res://Scripts/Beat.cs" id="1_m2csi"]
 [ext_resource type="Texture2D" uid="uid://x7kt8onxhwuq" path="res://Animations/RingPack/RingSheet/0028.tres" id="2_4w26r"]
 [ext_resource type="Texture2D" uid="uid://k8ajn35krfhj" path="res://Animations/FishPack/Sprites/0001.tres" id="2_m2csi"]
 [ext_resource type="Texture2D" uid="uid://cat30tapl8yvf" path="res://Animations/RingPack/RingSheet/0029.tres" id="3_6nkhd"]
@@ -859,7 +859,7 @@ animations = [{
 }]
 
 [node name="Beat" type="Node3D"]
-script = ExtResource("1_ab1vn")
+script = ExtResource("1_m2csi")
 
 [node name="Fish" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
